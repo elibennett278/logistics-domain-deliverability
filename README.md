@@ -39,3 +39,7 @@ The snippet above stays copy-paste simple. Before you ship, a few **required** s
 - **Logistics Domain Deliverability:** By default mail goes through a **shared** verified sender — fine for tests, but generic From + limited volume + shared reputation.
 - **Logistics Domain Deliverability:** For production, verify **your own** domain: `POST /v1/email/domain/verify` with `{"domain":"mail.yourco.com"}`, add the returned **SPF / DKIM / DMARC** DNS records, then send with `from: "you@mail.yourco.com"`.
 - **Logistics Domain Deliverability:** Use a dedicated subdomain and **warm it up** (ramp volume over days) to protect deliverability.
+
+## Further reading
+
+- [Go Tenant Domain Cutovers — 2-Record Apex Address Change Runbook](docs/go-tenant-domain-cutovers-2-record-apex-address-c-1uagl8.md)
